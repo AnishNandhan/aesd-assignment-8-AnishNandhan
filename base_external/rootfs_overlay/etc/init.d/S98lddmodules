@@ -2,14 +2,14 @@
 
 case $1 in
     start)
-        /etc/ldd/module_load hello
-        /etc/ldd/module_load faulty
-        /etc/ldd/scull_load
+        /usr/sbin/module_load hello
+        /usr/sbin/module_load faulty
+        /usr/sbin/scull_load
         ;;
     stop)
-        /etc/ldd/module_unload hello
-        /etc/ldd/module_unload faulty
-        /etc/ldd/scull_unload
+        /usr/sbin/module_unload hello
+        /usr/sbin/module_unload faulty
+        /usr/sbin/scull_unload
         ;;
     *)
         echo "Usage: $0 {start|stop}"
